@@ -1,121 +1,100 @@
-/**
- * Salon Bendella – Main JavaScript
- * Features: scroll-nav, reveal animations, language toggle, mobile menu
- */
-
-(function () {
+(function(){
   'use strict';
+  let lang = localStorage.getItem('sb_lang') || 'de';
 
-  /* ── State ── */
-  let currentLang = localStorage.getItem('sb_lang') || 'de';
-
-  /* ── DOM Ready ── */
   document.addEventListener('DOMContentLoaded', () => {
     initNavbar();
     initHamburger();
     initReveal();
     initLangToggle();
-    applyLang(currentLang);
+    applyLang(lang);
     initHeroReveal();
+    initStickyBar();
+    setActiveNav();
   });
 
-  /* ── Navbar scroll ── */
-  function initNavbar() {
-    const navbar = document.getElementById('navbar');
-    if (!navbar) return;
-    const onScroll = () => {
-      if (window.scrollY > 60) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
+  function initNavbar(){
+    const nav = document.getElementById('navbar');
+    if(!nav) return;
+    const tick = () => nav.classList.toggle('scrolled', window.scrollY > 60);
+    window.addEventListener('scroll', tick, {passive:true});
+    tick();
   }
 
-  /* ── Mobile hamburger ── */
-  function initHamburger() {
+  function initHamburger(){
     const btn = document.getElementById('hamburger');
     const links = document.getElementById('navLinks');
-    if (!btn || !links) return;
+    if(!btn||!links) return;
     btn.addEventListener('click', () => {
-      const isOpen = links.classList.toggle('open');
-      btn.setAttribute('aria-expanded', isOpen);
-      document.body.style.overflow = isOpen ? 'hidden' : '';
+      const open = links.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
     });
-    links.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        links.classList.remove('open');
-        document.body.style.overflow = '';
-      });
-    });
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      links.classList.remove('open');
+      document.body.style.overflow = '';
+    }));
   }
 
-  /* ── Scroll reveal ── */
-  function initReveal() {
-    const items = document.querySelectorAll('.reveal');
-    if (!items.length) return;
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-    items.forEach(el => observer.observe(el));
+  function initReveal(){
+    const els = document.querySelectorAll('.reveal');
+    if(!els.length) return;
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); } });
+    }, {threshold:0.12});
+    els.forEach(el => obs.observe(el));
   }
 
-  /* ── Hero immediate reveal ── */
-  function initHeroReveal() {
-    const heroItems = document.querySelectorAll('.hero-content .reveal');
-    heroItems.forEach((el, i) => {
-      setTimeout(() => el.classList.add('visible'), 200 + i * 200);
+  function initHeroReveal(){
+    document.querySelectorAll('.hero-content .reveal').forEach((el,i) => {
+      setTimeout(() => el.classList.add('visible'), 150 + i*180);
     });
-    const uspItems = document.querySelectorAll('.usp-strip .reveal');
     setTimeout(() => {
-      uspItems.forEach((el, i) => {
-        setTimeout(() => el.classList.add('visible'), i * 100);
+      document.querySelectorAll('.usp-strip .reveal').forEach((el,i) => {
+        setTimeout(() => el.classList.add('visible'), i*80);
       });
-    }, 600);
+    }, 500);
   }
 
-  /* ── Language Toggle ── */
-  function initLangToggle() {
+  function initStickyBar(){
+    const bar = document.getElementById('stickyBar');
+    if(!bar) return;
+    const obs = new IntersectionObserver(entries => {
+      bar.classList.toggle('visible', !entries[0].isIntersecting);
+    }, {threshold:0});
+    const hero = document.getElementById('hero');
+    if(hero) obs.observe(hero);
+  }
+
+  function initLangToggle(){
     const btn = document.getElementById('langToggle');
-    if (!btn) return;
+    if(!btn) return;
+    btn.textContent = lang === 'de' ? 'DE | EN' : 'EN | DE';
     btn.addEventListener('click', () => {
-      currentLang = currentLang === 'de' ? 'en' : 'de';
-      localStorage.setItem('sb_lang', currentLang);
-      applyLang(currentLang);
-      btn.textContent = currentLang === 'de' ? 'DE | EN' : 'EN | DE';
+      lang = lang === 'de' ? 'en' : 'de';
+      localStorage.setItem('sb_lang', lang);
+      applyLang(lang);
+      btn.textContent = lang === 'de' ? 'DE | EN' : 'EN | DE';
+      document.documentElement.lang = lang;
     });
-    btn.textContent = currentLang === 'de' ? 'DE | EN' : 'EN | DE';
   }
 
-  function applyLang(lang) {
-    const attr = 'data-' + lang;
+  function applyLang(l){
+    const attr = 'data-' + l;
     document.querySelectorAll('[data-de]').forEach(el => {
       const val = el.getAttribute(attr);
-      if (val !== null) {
-        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-          el.placeholder = val;
-        } else {
-          el.textContent = val;
-        }
+      if(val !== null){
+        if(el.tagName==='INPUT'||el.tagName==='TEXTAREA') el.placeholder = val;
+        else el.textContent = val;
       }
     });
-    document.documentElement.lang = lang;
+    document.documentElement.lang = l;
   }
 
-  /* ── Active nav link ── */
-  (function setActiveNav() {
+  function setActiveNav(){
     const path = window.location.pathname.split('/').pop() || 'index.html';
     document.querySelectorAll('.nav-links a').forEach(a => {
-      const href = a.getAttribute('href');
-      if (href === path) a.classList.add('active');
+      if(a.getAttribute('href') === path) a.classList.add('active');
     });
-  })();
-
+  }
 })();
