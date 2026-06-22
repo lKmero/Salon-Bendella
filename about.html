@@ -3,36 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Über Salon Bendella – Das Team, unsere Werte und was uns besonders macht." />
-  <title>Über uns | Salon Bendella Köln</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/animations.css" />
+  <title>Über uns – Team & Werte | Salon Bendella Köln</title>
+  <meta name="description" content="Das Team von Salon Bendella in Köln-Ehrenfeld: Friseurmeisterin Mahdjouba & Anke. Vegane Produkte, 5 Sprachen, modernes Ambiente." />
 </head>
 <body>
   <nav id="navbar">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo"><span class="logo-text">Salon Bendella</span></a>
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.jpg" alt="Salon Bendella Logo" class="nav-logo-img" style="height:48px;width:auto;object-fit:contain;border-radius:0;" />
+      </a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html" data-de="Start" data-en="Home">Start</a></li>
+        <li><a href="index.html"    data-de="Start"      data-en="Home">Start</a></li>
         <li><a href="services.html" data-de="Leistungen" data-en="Services">Leistungen</a></li>
-        <li><a href="about.html" class="active" data-de="Über uns" data-en="About">Über uns</a></li>
-        <li><a href="contact.html" data-de="Kontakt" data-en="Contact">Kontakt</a></li>
+        <li><a href="about.html"    data-de="Über uns"   data-en="About">Über uns</a></li>
+        <li><a href="contact.html"  data-de="Kontakt"    data-en="Contact">Kontakt</a></li>
         <li><a href="https://www.treatwell.de/ort/salon-bendella/" target="_blank" class="nav-cta" data-de="Termin buchen" data-en="Book Now">Termin buchen</a></li>
       </ul>
       <div class="nav-right">
-        <button class="lang-toggle" id="langToggle">DE | EN</button>
-        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">DE | EN</button>
+        <button class="hamburger" id="hamburger" aria-label="Menü"><span></span><span></span><span></span></button>
       </div>
     </div>
   </nav>
+  <!-- Sticky Booking Bar -->
+  <div class="sticky-booking" id="stickyBar">
+    <span class="sticky-booking-text" data-de="✦ Jetzt online buchen – schnell & einfach" data-en="✦ Book online now – quick & easy">✦ Jetzt online buchen – schnell & einfach</span>
+    <a href="https://www.treatwell.de/ort/salon-bendella/" target="_blank" class="btn btn-primary" data-de="Termin buchen" data-en="Book Now">Termin buchen</a>
+  </div>
 
   <header class="page-hero">
     <div class="page-hero-content">
       <span class="section-tag" data-de="Unser Team" data-en="Our Team">Unser Team</span>
       <h1 data-de="Über uns" data-en="About Us">Über uns</h1>
+      <div class="gold-line"></div>
     </div>
   </header>
 
@@ -40,70 +48,42 @@
     <div class="container">
 
       <div class="about-intro reveal">
-        <div class="about-intro-text">
-          <h2 data-de="Willkommen bei Salon Bendella" data-en="Welcome to Salon Bendella">Willkommen bei Salon Bendella</h2>
-          <p data-de="In Köln-Ehrenfeld haben wir die perfekte Adresse für Sie, wenn Sie sich mal wieder ein Beautyprogramm von Kopf bis Fuß gönnen möchten. Im Salon Bendella erwarten Sie wundervolle Treatments – von Ansatzfarbe und Haarschnitt über Augenbrauenlifting bis hin zu Waxing. Buchen Sie jetzt Ihren Termin und freuen Sie sich auf ein entspannendes Beautyerlebnis." data-en="In Cologne-Ehrenfeld, we have the perfect address for you when you want to treat yourself to a head-to-toe beauty programme. At Salon Bendella, wonderful treatments await you – from root colour and haircuts to eyebrow lifting and waxing. Book your appointment now and look forward to a relaxing beauty experience.">In Köln-Ehrenfeld haben wir die perfekte Adresse für Sie, wenn Sie sich mal wieder ein Beautyprogramm von Kopf bis Fuß gönnen möchten. Im Salon Bendella erwarten Sie wundervolle Treatments – von Ansatzfarbe und Haarschnitt über Augenbrauenlifting bis hin zu Waxing. Buchen Sie jetzt Ihren Termin und freuen Sie sich auf ein entspannendes Beautyerlebnis.</p>
-        </div>
+        <h2 data-de="Willkommen bei Salon Bendella" data-en="Welcome to Salon Bendella">Willkommen bei Salon Bendella</h2>
+        <div class="gold-line"></div>
+        <p data-de="In Köln-Ehrenfeld haben wir die perfekte Adresse für Sie, wenn Sie sich einmal ein Beautyprogramm von Kopf bis Fuß gönnen möchten. Im Salon Bendella erwarten Sie wundervolle Treatments – von Ansatzfarbe und Haarschnitt bis hin zu Waxing. Buchen Sie jetzt Ihren Termin und freuen Sie sich auf ein entspannendes Beautyerlebnis." data-en="In Cologne-Ehrenfeld, we have the perfect address for you when you want to treat yourself to a head-to-toe beauty experience. At Salon Bendella, wonderful treatments await you – from root colour and haircuts to waxing. Book your appointment now and look forward to a relaxing beauty experience.">In Köln-Ehrenfeld haben wir die perfekte Adresse für Sie, wenn Sie sich einmal ein Beautyprogramm von Kopf bis Fuß gönnen möchten. Im Salon Bendella erwarten Sie wundervolle Treatments – von Ansatzfarbe und Haarschnitt bis hin zu Waxing. Buchen Sie jetzt Ihren Termin und freuen Sie sich auf ein entspannendes Beautyerlebnis.</p>
       </div>
 
-      <!-- Team Cards -->
+      <!-- Team -->
       <div class="team-grid reveal">
         <div class="team-card">
           <div class="team-photo-frame">
-            <div class="team-photo-placeholder">
-              <svg viewBox="0 0 200 240" fill="none"><rect width="200" height="240" fill="#111"/><circle cx="100" cy="85" r="40" stroke="#c9a96e" stroke-width="1"/><path d="M40 200c0-33 27-60 60-60s60 27 60 60" stroke="#c9a96e" stroke-width="1"/><text x="100" y="230" text-anchor="middle" fill="#555" font-family="Jost" font-size="10">Foto folgt</text></svg>
-            </div>
+            <div class="team-photo-placeholder"><p data-de="Foto folgt" data-en="Photo coming soon">Foto folgt</p></div>
           </div>
           <h3>Mahdjouba</h3>
           <span class="team-role" data-de="Inhaberin & Friseurmeisterin" data-en="Owner & Master Hairdresser">Inhaberin & Friseurmeisterin</span>
-          <p data-de="Mit jahrelanger Erfahrung und Leidenschaft für ihr Handwerk verwandelt Mahdjouba jeden Salon-Besuch in ein unvergessliches Erlebnis." data-en="With years of experience and a passion for her craft, Mahdjouba turns every salon visit into an unforgettable experience.">Mit jahrelanger Erfahrung und Leidenschaft für ihr Handwerk verwandelt Mahdjouba jeden Salon-Besuch in ein unvergessliches Erlebnis.</p>
+          <p data-de="Mit jahrelanger Erfahrung und echter Leidenschaft für ihr Handwerk verwandelt Mahdjouba jeden Salon-Besuch in ein unvergessliches Erlebnis. Als Friseurmeisterin ist sie Expertin für Haarschnitte, Colorationen und alle Haarbehandlungen." data-en="With years of experience and a genuine passion for her craft, Mahdjouba turns every salon visit into an unforgettable experience. As a master hairdresser, she is an expert in cuts, colour and all hair treatments.">Mit jahrelanger Erfahrung und echter Leidenschaft für ihr Handwerk verwandelt Mahdjouba jeden Salon-Besuch in ein unvergessliches Erlebnis. Als Friseurmeisterin ist sie Expertin für Haarschnitte, Colorationen und alle Haarbehandlungen.</p>
         </div>
         <div class="team-card">
           <div class="team-photo-frame">
-            <div class="team-photo-placeholder">
-              <svg viewBox="0 0 200 240" fill="none"><rect width="200" height="240" fill="#111"/><circle cx="100" cy="85" r="40" stroke="#c9a96e" stroke-width="1"/><path d="M40 200c0-33 27-60 60-60s60 27 60 60" stroke="#c9a96e" stroke-width="1"/><text x="100" y="230" text-anchor="middle" fill="#555" font-family="Jost" font-size="10">Foto folgt</text></svg>
-            </div>
+            <div class="team-photo-placeholder"><p data-de="Foto folgt" data-en="Photo coming soon">Foto folgt</p></div>
           </div>
-          <h3>Alina</h3>
-          <span class="team-role" data-de="Kosmetikerin" data-en="Beauty Specialist">Kosmetikerin</span>
-          <p data-de="Alina ist Expertin für Augenbrauen- und Wimpernbehandlungen und sorgt mit viel Sorgfalt für perfekte Ergebnisse." data-en="Alina specialises in eyebrow and lash treatments, delivering perfect results with great care.">Alina ist Expertin für Augenbrauen- und Wimpernbehandlungen und sorgt mit viel Sorgfalt für perfekte Ergebnisse.</p>
+          <h3>Anke</h3>
+          <span class="team-role" data-de="Friseurin" data-en="Hairdresser">Friseurin</span>
+          <p data-de="Anke ist eine erfahrene Friseurin mit einem feinen Gespür für Schnitte und Styling. Mit Sorgfalt und Leidenschaft sorgt sie dafür, dass jede Kundin den Salon mit einem strahlenden Lächeln verlässt." data-en="Anke is an experienced hairdresser with a fine instinct for cuts and styling. With care and passion, she ensures every client leaves the salon with a radiant smile.">Anke ist eine erfahrene Friseurin mit einem feinen Gespür für Schnitte und Styling. Mit Sorgfalt und Leidenschaft sorgt sie dafür, dass jede Kundin den Salon mit einem strahlenden Lächeln verlässt.</p>
         </div>
       </div>
 
       <!-- Values -->
       <div class="values-section reveal">
         <h2 data-de="Was uns besonders macht" data-en="What Makes Us Special">Was uns besonders macht</h2>
-        <div class="values-grid">
-          <div class="value-card">
-            <span class="value-icon">🌿</span>
-            <h4 data-de="Vegane Produkte" data-en="Vegan Products">Vegane Produkte</h4>
-            <p data-de="Wir verwenden ausschließlich vegane, tierversuchsfreie Produkte und Naturkosmetik." data-en="We use only vegan, cruelty-free products and natural cosmetics.">Wir verwenden ausschließlich vegane, tierversuchsfreie Produkte und Naturkosmetik.</p>
-          </div>
-          <div class="value-card">
-            <span class="value-icon">🌍</span>
-            <h4 data-de="5 Sprachen" data-en="5 Languages">5 Sprachen</h4>
-            <p data-de="Unser Team spricht Deutsch, Englisch, Türkisch, Arabisch und Rumänisch." data-en="Our team speaks German, English, Turkish, Arabic and Romanian.">Unser Team spricht Deutsch, Englisch, Türkisch, Arabisch und Rumänisch.</p>
-          </div>
-          <div class="value-card">
-            <span class="value-icon">☕</span>
-            <h4 data-de="Wohlfühl-Ambiente" data-en="Welcoming Atmosphere">Wohlfühl-Ambiente</h4>
-            <p data-de="Helles, modernes Ambiente mit kostenlosen Getränken und WLAN für Ihren Komfort." data-en="Bright, modern ambience with free drinks and WiFi for your comfort.">Helles, modernes Ambiente mit kostenlosen Getränken und WLAN für Ihren Komfort.</p>
-          </div>
-          <div class="value-card">
-            <span class="value-icon">🐾</span>
-            <h4 data-de="Alle willkommen" data-en="Everyone Welcome">Alle willkommen</h4>
-            <p data-de="Kinder und Haustiere sind bei uns herzlich willkommen – wir heißen die ganze Familie willkommen." data-en="Children and pets are warmly welcome – we welcome the whole family.">Kinder und Haustiere sind bei uns herzlich willkommen – wir heißen die ganze Familie willkommen.</p>
-          </div>
-          <div class="value-card">
-            <span class="value-icon">🚋</span>
-            <h4 data-de="Zentrale Lage" data-en="Central Location">Zentrale Lage</h4>
-            <p data-de="Gut erreichbar mit der Straßenbahn: Haltestellen Körnerstraße & Piusstraße in Gehweite." data-en="Easily accessible by tram: stops Körnerstraße & Piusstraße within walking distance.">Gut erreichbar mit der Straßenbahn: Haltestellen Körnerstraße & Piusstraße in Gehweite.</p>
-          </div>
-          <div class="value-card">
-            <span class="value-icon">✂️</span>
-            <h4 data-de="Expertise" data-en="Expertise">Expertise</h4>
-            <p data-de="Spezialisiert auf Haarschnitte, Colorationen, Gesichtsbehandlungen, Augenbrauen & Waxing." data-en="Specialised in haircuts, colour, facials, eyebrows & waxing.">Spezialisiert auf Haarschnitte, Colorationen, Gesichtsbehandlungen, Augenbrauen & Waxing.</p>
-          </div>
+        <div class="gold-line"></div>
+        <div class="values-grid" style="margin-top:2.5rem;">
+          <div class="value-card"><span class="value-icon">🌿</span><h4 data-de="Vegane Produkte" data-en="Vegan Products">Vegane Produkte</h4><p data-de="Ausschließlich vegane, tierversuchsfreie Produkte und Naturkosmetik." data-en="Exclusively vegan, cruelty-free products and natural cosmetics.">Ausschließlich vegane, tierversuchsfreie Produkte und Naturkosmetik.</p></div>
+          <div class="value-card"><span class="value-icon">🌍</span><h4 data-de="5 Sprachen" data-en="5 Languages">5 Sprachen</h4><p data-de="Unser Team spricht Deutsch, Englisch, Türkisch, Arabisch und Rumänisch." data-en="Our team speaks German, English, Turkish, Arabic and Romanian.">Unser Team spricht Deutsch, Englisch, Türkisch, Arabisch und Rumänisch.</p></div>
+          <div class="value-card"><span class="value-icon">☕</span><h4 data-de="Wohlfühl-Ambiente" data-en="Welcoming Atmosphere">Wohlfühl-Ambiente</h4><p data-de="Helles, modernes Ambiente mit kostenlosen Getränken und WLAN." data-en="Bright, modern ambience with free drinks and WiFi.">Helles, modernes Ambiente mit kostenlosen Getränken und WLAN.</p></div>
+          <div class="value-card"><span class="value-icon">🐾</span><h4 data-de="Alle willkommen" data-en="Everyone Welcome">Alle willkommen</h4><p data-de="Kinder und Haustiere sind herzlich willkommen." data-en="Children and pets are warmly welcome.">Kinder und Haustiere sind herzlich willkommen.</p></div>
+          <div class="value-card"><span class="value-icon">🚋</span><h4 data-de="Zentrale Lage" data-en="Central Location">Zentrale Lage</h4><p data-de="Bestens erreichbar: Haltestellen Körnerstraße & Piusstraße in Gehweite." data-en="Easily accessible: stops Körnerstraße & Piusstraße within walking distance.">Bestens erreichbar: Haltestellen Körnerstraße & Piusstraße in Gehweite.</p></div>
+          <div class="value-card"><span class="value-icon">✂️</span><h4 data-de="Expertise" data-en="Expertise">Expertise</h4><p data-de="Spezialisiert auf Haarschnitte, Colorationen, Augenbrauen & Wimpern." data-en="Specialised in haircuts, colour, brows & lashes.">Spezialisiert auf Haarschnitte, Colorationen, Augenbrauen & Wimpern.</p></div>
         </div>
       </div>
 
@@ -115,20 +95,35 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <div class="footer-brand"><span class="logo-text">Salon Bendella</span><p data-de="Ihr Beauty-Salon in Köln-Ehrenfeld" data-en="Your Beauty Salon in Cologne-Ehrenfeld">Ihr Beauty-Salon in Köln-Ehrenfeld</p></div>
-      <div class="footer-links"><ul>
-        <li><a href="index.html" data-de="Start" data-en="Home">Start</a></li>
-        <li><a href="services.html" data-de="Leistungen" data-en="Services">Leistungen</a></li>
-        <li><a href="about.html" data-de="Über uns" data-en="About">Über uns</a></li>
-        <li><a href="contact.html" data-de="Kontakt" data-en="Contact">Kontakt</a></li>
-      </ul></div>
-      <div class="footer-book">
-        <a href="https://www.treatwell.de/ort/salon-bendella/" target="_blank" class="btn btn-primary" data-de="Termin buchen" data-en="Book Now">Termin buchen</a>
-        <p class="footer-legal"><a href="impressum.html" data-de="Impressum" data-en="Imprint">Impressum</a> · <a href="datenschutz.html" data-de="Datenschutz" data-en="Privacy">Datenschutz</a></p>
+      <div class="footer-brand">
+        <img src="images/logo.jpg" alt="Salon Bendella" class="footer-logo" />
+        <p class="footer-tagline">BEAUTY. CONFIDENCE. YOU.</p>
+        <p data-de="Ihr Beauty-Salon in Köln-Ehrenfeld" data-en="Your Beauty Salon in Cologne-Ehrenfeld">Ihr Beauty-Salon in Köln-Ehrenfeld</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-de="Navigation" data-en="Navigation">Navigation</h4>
+        <ul>
+          <li><a href="index.html"    data-de="Start"      data-en="Home">Start</a></li>
+          <li><a href="services.html" data-de="Leistungen" data-en="Services">Leistungen</a></li>
+          <li><a href="about.html"    data-de="Über uns"   data-en="About">Über uns</a></li>
+          <li><a href="contact.html"  data-de="Kontakt"    data-en="Contact">Kontakt</a></li>
+          <li><a href="impressum.html"  data-de="Impressum"  data-en="Imprint">Impressum</a></li>
+          <li><a href="datenschutz.html" data-de="Datenschutz" data-en="Privacy">Datenschutz</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-de="Kontakt" data-en="Contact">Kontakt</h4>
+        <ul>
+          <li><a href="https://maps.google.com/?q=Venloer+Straße+226,+50823+Köln" target="_blank">Venloer Str. 226, 50823 Köln</a></li>
+          <li><a href="mailto:salon@bendella.de">salon@bendella.de</a></li>
+          <li style="color:rgba(255,255,255,0.35);font-size:0.8rem;" data-de="Di–Fr 10:00–18:00 | Sa 09:30–16:15" data-en="Tue–Fri 10:00–18:00 | Sat 09:30–16:15">Di–Fr 10:00–18:00 | Sa 09:30–16:15</li>
+        </ul>
+        <a href="https://www.treatwell.de/ort/salon-bendella/" target="_blank" class="btn btn-primary btn-sm" style="margin-top:1.2rem;display:inline-block;" data-de="Termin buchen" data-en="Book Now">Termin buchen</a>
       </div>
     </div>
-    <p class="footer-copy">© 2026 Salon Bendella · Alle Rechte vorbehalten</p>
+    <p class="footer-copy">© 2026 Salon Bendella · Venloer Straße 226 · 50823 Köln-Ehrenfeld</p>
   </footer>
   <script src="js/main.js"></script>
+
 </body>
 </html>

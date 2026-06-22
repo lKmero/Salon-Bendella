@@ -3,68 +3,84 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Impressum | Salon Bendella</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <title>Impressum | Salon Bendella Köln</title>
+  <meta name="robots" content="noindex,nofollow" />
 </head>
 <body>
   <nav id="navbar">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo"><span class="logo-text">Salon Bendella</span></a>
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.jpg" alt="Salon Bendella Logo" class="nav-logo-img" style="height:48px;width:auto;object-fit:contain;border-radius:0;" />
+      </a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Start</a></li>
-        <li><a href="services.html">Leistungen</a></li>
-        <li><a href="about.html">Über uns</a></li>
-        <li><a href="contact.html">Kontakt</a></li>
-        <li><a href="https://www.treatwell.de/ort/salon-bendella/" target="_blank" class="nav-cta">Termin buchen</a></li>
+        <li><a href="index.html"    data-de="Start"      data-en="Home">Start</a></li>
+        <li><a href="services.html" data-de="Leistungen" data-en="Services">Leistungen</a></li>
+        <li><a href="about.html"    data-de="Über uns"   data-en="About">Über uns</a></li>
+        <li><a href="contact.html"  data-de="Kontakt"    data-en="Contact">Kontakt</a></li>
+        <li><a href="https://www.treatwell.de/ort/salon-bendella/" target="_blank" class="nav-cta" data-de="Termin buchen" data-en="Book Now">Termin buchen</a></li>
       </ul>
       <div class="nav-right">
-        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">DE | EN</button>
+        <button class="hamburger" id="hamburger" aria-label="Menü"><span></span><span></span><span></span></button>
       </div>
     </div>
   </nav>
-
-  <header class="page-hero">
-    <div class="page-hero-content">
-      <h1>Impressum</h1>
-    </div>
-  </header>
-
+  <header class="page-hero"><div class="page-hero-content"><h1>Impressum</h1></div></header>
   <section class="section legal-section">
     <div class="container legal-content">
       <h2>Angaben gemäß § 5 TMG</h2>
-      <p>
-        Salon Bendella<br>
-        Venloer Straße 226<br>
-        50823 Köln<br>
-        Deutschland
-      </p>
+      <p><strong>Salon Bendella</strong><br>Venloer Straße 226<br>50823 Köln<br>Deutschland</p>
       <h2>Kontakt</h2>
       <p>E-Mail: <a href="mailto:salon@bendella.de">salon@bendella.de</a></p>
-      <h2>Berufsbezeichnung</h2>
-      <p>Friseurmeisterin (verliehen in Deutschland)</p>
+      <h2>Berufsbezeichnung & -regelungen</h2>
+      <p>Friseurmeisterin (verliehen in Deutschland).<br>Zuständige Handwerkskammer: Handwerkskammer zu Köln.</p>
+      <h2>Verantwortlich für den Inhalt (§ 55 Abs. 2 RStV)</h2>
+      <p>Mahdjouba Bendella<br>Venloer Straße 226<br>50823 Köln</p>
       <h2>EU-Streitschlichtung</h2>
-      <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank">https://ec.europa.eu/consumers/odr/</a>.<br>
-      Unsere E-Mail-Adresse finden Sie oben im Impressum.</p>
-      <h2>Verbraucherstreitbeilegung / Universalschlichtungsstelle</h2>
+      <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr/</a>.</p>
+      <h2>Verbraucherstreitbeilegung</h2>
       <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
-      <p class="legal-note">⚠️ <strong>Hinweis:</strong> Dieses Impressum ist ein Platzhalter. Bitte lassen Sie es von einem Rechtsanwalt prüfen und ergänzen (Steuernummer, Handelsregistereintrag falls vorhanden etc.).</p>
+      <h2>Haftung für Inhalte</h2>
+      <p>Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.</p>
+      <div class="legal-note">⚠️ <strong>Hinweis:</strong> Bitte ergänzen Sie dieses Impressum um Ihre Steuernummer bzw. USt-IdNr. und ggf. Handelsregistereintrag. Lassen Sie es von einem Rechtsanwalt prüfen.</div>
     </div>
   </section>
-
   <footer class="site-footer">
     <div class="footer-inner">
-      <div class="footer-brand"><span class="logo-text">Salon Bendella</span></div>
-      <div class="footer-links"><ul>
-        <li><a href="index.html">Start</a></li>
-        <li><a href="impressum.html">Impressum</a></li>
-        <li><a href="datenschutz.html">Datenschutz</a></li>
-      </ul></div>
+      <div class="footer-brand">
+        <img src="images/logo.jpg" alt="Salon Bendella" class="footer-logo" />
+        <p class="footer-tagline">BEAUTY. CONFIDENCE. YOU.</p>
+        <p data-de="Ihr Beauty-Salon in Köln-Ehrenfeld" data-en="Your Beauty Salon in Cologne-Ehrenfeld">Ihr Beauty-Salon in Köln-Ehrenfeld</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-de="Navigation" data-en="Navigation">Navigation</h4>
+        <ul>
+          <li><a href="index.html"    data-de="Start"      data-en="Home">Start</a></li>
+          <li><a href="services.html" data-de="Leistungen" data-en="Services">Leistungen</a></li>
+          <li><a href="about.html"    data-de="Über uns"   data-en="About">Über uns</a></li>
+          <li><a href="contact.html"  data-de="Kontakt"    data-en="Contact">Kontakt</a></li>
+          <li><a href="impressum.html"  data-de="Impressum"  data-en="Imprint">Impressum</a></li>
+          <li><a href="datenschutz.html" data-de="Datenschutz" data-en="Privacy">Datenschutz</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-de="Kontakt" data-en="Contact">Kontakt</h4>
+        <ul>
+          <li><a href="https://maps.google.com/?q=Venloer+Straße+226,+50823+Köln" target="_blank">Venloer Str. 226, 50823 Köln</a></li>
+          <li><a href="mailto:salon@bendella.de">salon@bendella.de</a></li>
+          <li style="color:rgba(255,255,255,0.35);font-size:0.8rem;" data-de="Di–Fr 10:00–18:00 | Sa 09:30–16:15" data-en="Tue–Fri 10:00–18:00 | Sat 09:30–16:15">Di–Fr 10:00–18:00 | Sa 09:30–16:15</li>
+        </ul>
+        <a href="https://www.treatwell.de/ort/salon-bendella/" target="_blank" class="btn btn-primary btn-sm" style="margin-top:1.2rem;display:inline-block;" data-de="Termin buchen" data-en="Book Now">Termin buchen</a>
+      </div>
     </div>
-    <p class="footer-copy">© 2026 Salon Bendella · Alle Rechte vorbehalten</p>
+    <p class="footer-copy">© 2026 Salon Bendella · Venloer Straße 226 · 50823 Köln-Ehrenfeld</p>
   </footer>
   <script src="js/main.js"></script>
+
 </body>
 </html>

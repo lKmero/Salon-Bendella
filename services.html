@@ -3,48 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Salon Bendella Leistungen & Preise – Haarschnitte, Colorationen, Augenbrauen, Wimpern, Kinderhaarschnitte in Köln-Ehrenfeld." />
-  <title>Leistungen & Preise | Salon Bendella Köln</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/animations.css" />
+  <title>Leistungen & Preise | Salon Bendella Köln Ehrenfeld</title>
+  <meta name="description" content="Alle Leistungen & Preise von Salon Bendella Köln-Ehrenfeld: Haarschnitte, Colorationen, Foliensträhnen, Augenbrauen, Wimpern, Kinder. Jetzt online buchen." />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"HairSalon","name":"Salon Bendella","url":"https://salon-bendella.de","address":{"@type":"PostalAddress","streetAddress":"Venloer Straße 226","addressLocality":"Köln","postalCode":"50823","addressCountry":"DE"}}
+  </script>
 </head>
 <body>
-
   <nav id="navbar">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo"><span class="logo-text">Salon Bendella</span></a>
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.jpg" alt="Salon Bendella Logo" class="nav-logo-img" style="height:48px;width:auto;object-fit:contain;border-radius:0;" />
+      </a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html" data-de="Start" data-en="Home">Start</a></li>
-        <li><a href="services.html" class="active" data-de="Leistungen" data-en="Services">Leistungen</a></li>
-        <li><a href="about.html" data-de="Über uns" data-en="About">Über uns</a></li>
-        <li><a href="contact.html" data-de="Kontakt" data-en="Contact">Kontakt</a></li>
+        <li><a href="index.html"    data-de="Start"      data-en="Home">Start</a></li>
+        <li><a href="services.html" data-de="Leistungen" data-en="Services">Leistungen</a></li>
+        <li><a href="about.html"    data-de="Über uns"   data-en="About">Über uns</a></li>
+        <li><a href="contact.html"  data-de="Kontakt"    data-en="Contact">Kontakt</a></li>
         <li><a href="https://www.treatwell.de/ort/salon-bendella/" target="_blank" class="nav-cta" data-de="Termin buchen" data-en="Book Now">Termin buchen</a></li>
       </ul>
       <div class="nav-right">
-        <button class="lang-toggle" id="langToggle">DE | EN</button>
-        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">DE | EN</button>
+        <button class="hamburger" id="hamburger" aria-label="Menü"><span></span><span></span><span></span></button>
       </div>
     </div>
   </nav>
+  <!-- Sticky Booking Bar -->
+  <div class="sticky-booking" id="stickyBar">
+    <span class="sticky-booking-text" data-de="✦ Jetzt online buchen – schnell & einfach" data-en="✦ Book online now – quick & easy">✦ Jetzt online buchen – schnell & einfach</span>
+    <a href="https://www.treatwell.de/ort/salon-bendella/" target="_blank" class="btn btn-primary" data-de="Termin buchen" data-en="Book Now">Termin buchen</a>
+  </div>
 
   <header class="page-hero">
     <div class="page-hero-content">
-      <span class="section-tag" data-de="Unsere Leistungen" data-en="Our Services">Unsere Leistungen</span>
-      <h1 data-de="Preisliste" data-en="Price List">Preisliste</h1>
+      <span class="section-tag" data-de="Transparente Preise" data-en="Transparent Prices">Transparente Preise</span>
+      <h1 data-de="Leistungen & Preise" data-en="Services & Prices">Leistungen & Preise</h1>
+      <div class="gold-line"></div>
     </div>
   </header>
 
   <section class="section services-full">
     <div class="container">
 
-      <!-- Damen Haarschnitte -->
       <div id="haarschnitte" class="price-category reveal">
-        <div class="category-header">
-          <h2 data-de="Damen – Haarschnitte & Styling" data-en="Ladies – Haircuts & Styling">Damen – Haarschnitte & Styling</h2>
-        </div>
+        <div class="category-header"><h2 data-de="Damen – Haarschnitte & Styling" data-en="Ladies – Haircuts & Styling">Damen – Haarschnitte & Styling</h2></div>
         <div class="price-table">
           <div class="price-service-block">
             <h3 data-de="Waschen & Schneiden" data-en="Wash & Cut">Waschen & Schneiden</h3>
@@ -67,11 +74,8 @@
         </div>
       </div>
 
-      <!-- Damen Farbe -->
       <div id="farbe" class="price-category reveal">
-        <div class="category-header">
-          <h2 data-de="Damen – Farbe & Coloration" data-en="Ladies – Colour & Colouring">Damen – Farbe & Coloration</h2>
-        </div>
+        <div class="category-header"><h2 data-de="Damen – Farbe & Coloration" data-en="Ladies – Colour & Colouring">Damen – Farbe & Coloration</h2></div>
         <div class="price-table">
           <div class="price-service-block">
             <h3 data-de="Foliensträhnen Oberkopf & Föhnen" data-en="Foil Highlights & Blow-dry">Foliensträhnen Oberkopf & Föhnen</h3>
@@ -96,11 +100,8 @@
         </div>
       </div>
 
-      <!-- Herren -->
       <div class="price-category reveal">
-        <div class="category-header">
-          <h2 data-de="Herren – Haarschnitte & Styling" data-en="Men – Haircuts & Styling">Herren – Haarschnitte & Styling</h2>
-        </div>
+        <div class="category-header"><h2 data-de="Herren – Haarschnitte & Styling" data-en="Men – Haircuts & Styling">Herren – Haarschnitte & Styling</h2></div>
         <div class="price-table">
           <div class="price-service-block">
             <h3 data-de="Waschen & Schneiden" data-en="Wash & Cut">Waschen & Schneiden</h3>
@@ -109,11 +110,8 @@
         </div>
       </div>
 
-      <!-- Augenbrauen & Wimpern -->
       <div id="augenbrauen" class="price-category reveal">
-        <div class="category-header">
-          <h2 data-de="Augenbrauen & Wimpernbehandlungen" data-en="Eyebrow & Lash Treatments">Augenbrauen & Wimpernbehandlungen</h2>
-        </div>
+        <div class="category-header"><h2 data-de="Augenbrauen & Wimpernbehandlungen" data-en="Eyebrow & Lash Treatments">Augenbrauen & Wimpernbehandlungen</h2></div>
         <div class="price-table">
           <div class="price-service-block">
             <h3 data-de="Augenbrauen zupfen (Fadentechnik)" data-en="Eyebrow Threading">Augenbrauen zupfen (Fadentechnik)</h3>
@@ -134,11 +132,8 @@
         </div>
       </div>
 
-      <!-- Kinder -->
       <div id="kinder" class="price-category reveal">
-        <div class="category-header">
-          <h2 data-de="Kinder – Haarschnitte & Styling" data-en="Children – Haircuts & Styling">Kinder – Haarschnitte & Styling</h2>
-        </div>
+        <div class="category-header"><h2 data-de="Kinder – Haarschnitte & Styling" data-en="Children – Haircuts & Styling">Kinder – Haarschnitte & Styling</h2></div>
         <div class="price-table">
           <div class="price-service-block">
             <h3 data-de="Haarschnitt (bis 6 Jahre)" data-en="Haircut (up to 6 years)">Haarschnitt (bis 6 Jahre)</h3>
@@ -147,31 +142,44 @@
         </div>
       </div>
 
-      <!-- CTA -->
       <div class="services-book-cta reveal">
-        <p data-de="Alle Preise verstehen sich inklusive Beratung und Qualitätsprodukten." data-en="All prices include consultation and quality products.">Alle Preise verstehen sich inklusive Beratung und Qualitätsprodukten.</p>
+        <p data-de="Alle Preise inklusive Beratung · Vegane Qualitätsprodukte · Online buchen in unter 1 Minute" data-en="All prices include consultation · Vegan quality products · Book online in under 1 minute">Alle Preise inklusive Beratung · Vegane Qualitätsprodukte · Online buchen in unter 1 Minute</p>
         <a href="https://www.treatwell.de/ort/salon-bendella/" target="_blank" class="btn btn-primary btn-large" data-de="Jetzt Termin buchen" data-en="Book Now">Jetzt Termin buchen</a>
       </div>
-
     </div>
   </section>
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <div class="footer-brand"><span class="logo-text">Salon Bendella</span><p data-de="Ihr Beauty-Salon in Köln-Ehrenfeld" data-en="Your Beauty Salon in Cologne-Ehrenfeld">Ihr Beauty-Salon in Köln-Ehrenfeld</p></div>
-      <div class="footer-links"><ul>
-        <li><a href="index.html" data-de="Start" data-en="Home">Start</a></li>
-        <li><a href="services.html" data-de="Leistungen" data-en="Services">Leistungen</a></li>
-        <li><a href="about.html" data-de="Über uns" data-en="About">Über uns</a></li>
-        <li><a href="contact.html" data-de="Kontakt" data-en="Contact">Kontakt</a></li>
-      </ul></div>
-      <div class="footer-book">
-        <a href="https://www.treatwell.de/ort/salon-bendella/" target="_blank" class="btn btn-primary" data-de="Termin buchen" data-en="Book Now">Termin buchen</a>
-        <p class="footer-legal"><a href="impressum.html" data-de="Impressum" data-en="Imprint">Impressum</a> · <a href="datenschutz.html" data-de="Datenschutz" data-en="Privacy">Datenschutz</a></p>
+      <div class="footer-brand">
+        <img src="images/logo.jpg" alt="Salon Bendella" class="footer-logo" />
+        <p class="footer-tagline">BEAUTY. CONFIDENCE. YOU.</p>
+        <p data-de="Ihr Beauty-Salon in Köln-Ehrenfeld" data-en="Your Beauty Salon in Cologne-Ehrenfeld">Ihr Beauty-Salon in Köln-Ehrenfeld</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-de="Navigation" data-en="Navigation">Navigation</h4>
+        <ul>
+          <li><a href="index.html"    data-de="Start"      data-en="Home">Start</a></li>
+          <li><a href="services.html" data-de="Leistungen" data-en="Services">Leistungen</a></li>
+          <li><a href="about.html"    data-de="Über uns"   data-en="About">Über uns</a></li>
+          <li><a href="contact.html"  data-de="Kontakt"    data-en="Contact">Kontakt</a></li>
+          <li><a href="impressum.html"  data-de="Impressum"  data-en="Imprint">Impressum</a></li>
+          <li><a href="datenschutz.html" data-de="Datenschutz" data-en="Privacy">Datenschutz</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-de="Kontakt" data-en="Contact">Kontakt</h4>
+        <ul>
+          <li><a href="https://maps.google.com/?q=Venloer+Straße+226,+50823+Köln" target="_blank">Venloer Str. 226, 50823 Köln</a></li>
+          <li><a href="mailto:salon@bendella.de">salon@bendella.de</a></li>
+          <li style="color:rgba(255,255,255,0.35);font-size:0.8rem;" data-de="Di–Fr 10:00–18:00 | Sa 09:30–16:15" data-en="Tue–Fri 10:00–18:00 | Sat 09:30–16:15">Di–Fr 10:00–18:00 | Sa 09:30–16:15</li>
+        </ul>
+        <a href="https://www.treatwell.de/ort/salon-bendella/" target="_blank" class="btn btn-primary btn-sm" style="margin-top:1.2rem;display:inline-block;" data-de="Termin buchen" data-en="Book Now">Termin buchen</a>
       </div>
     </div>
-    <p class="footer-copy">© 2026 Salon Bendella · Alle Rechte vorbehalten</p>
+    <p class="footer-copy">© 2026 Salon Bendella · Venloer Straße 226 · 50823 Köln-Ehrenfeld</p>
   </footer>
   <script src="js/main.js"></script>
+
 </body>
 </html>

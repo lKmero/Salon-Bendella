@@ -3,64 +3,88 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Datenschutz | Salon Bendella</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <title>Datenschutz | Salon Bendella Köln</title>
+  <meta name="robots" content="noindex,nofollow" />
 </head>
 <body>
   <nav id="navbar">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo"><span class="logo-text">Salon Bendella</span></a>
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo.jpg" alt="Salon Bendella Logo" class="nav-logo-img" style="height:48px;width:auto;object-fit:contain;border-radius:0;" />
+      </a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Start</a></li>
-        <li><a href="services.html">Leistungen</a></li>
-        <li><a href="about.html">Über uns</a></li>
-        <li><a href="contact.html">Kontakt</a></li>
-        <li><a href="https://www.treatwell.de/ort/salon-bendella/" target="_blank" class="nav-cta">Termin buchen</a></li>
+        <li><a href="index.html"    data-de="Start"      data-en="Home">Start</a></li>
+        <li><a href="services.html" data-de="Leistungen" data-en="Services">Leistungen</a></li>
+        <li><a href="about.html"    data-de="Über uns"   data-en="About">Über uns</a></li>
+        <li><a href="contact.html"  data-de="Kontakt"    data-en="Contact">Kontakt</a></li>
+        <li><a href="https://www.treatwell.de/ort/salon-bendella/" target="_blank" class="nav-cta" data-de="Termin buchen" data-en="Book Now">Termin buchen</a></li>
       </ul>
       <div class="nav-right">
-        <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">DE | EN</button>
+        <button class="hamburger" id="hamburger" aria-label="Menü"><span></span><span></span><span></span></button>
       </div>
     </div>
   </nav>
-
-  <header class="page-hero">
-    <div class="page-hero-content"><h1>Datenschutzerklärung</h1></div>
-  </header>
-
+  <header class="page-hero"><div class="page-hero-content"><h1>Datenschutzerklärung</h1></div></header>
   <section class="section legal-section">
     <div class="container legal-content">
       <h2>1. Datenschutz auf einen Blick</h2>
-      <h3>Allgemeine Hinweise</h3>
-      <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen.</p>
+      <h3>Verantwortliche Stelle</h3>
+      <p>Salon Bendella, Venloer Straße 226, 50823 Köln, E-Mail: salon@bendella.de</p>
       <h3>Datenerfassung auf dieser Website</h3>
-      <p><strong>Wer ist verantwortlich für die Datenerfassung?</strong><br>
-      Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber: Salon Bendella, Venloer Straße 226, 50823 Köln.</p>
-      <p><strong>Wie erfassen wir Ihre Daten?</strong><br>
-      Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese mitteilen – etwa über das Kontaktformular. Andere Daten werden automatisch beim Besuch der Website durch unsere IT-Systeme erfasst (Browser, Betriebssystem, Uhrzeit des Seitenaufrufs).</p>
+      <p>Diese Website erfasst automatisch technische Daten (IP-Adresse, Browser, Betriebssystem, Zugriffszeit) beim Besuch. Diese werden nicht mit anderen Daten zusammengeführt. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der technischen Bereitstellung).</p>
       <h2>2. Hosting</h2>
-      <p>Diese Website wird auf einem externen Server gehostet. Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters gespeichert.</p>
+      <p>Diese Website wird auf GitHub Pages (GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA) gehostet. Es gelten die <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener">Datenschutzbestimmungen von GitHub</a>. Beim Aufruf dieser Website überträgt Ihr Browser automatisch technische Daten (u. a. IP-Adresse) an GitHub-Server. Dies erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO.</p>
       <h2>3. Kontaktformular</h2>
-      <p>Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben inklusive der von Ihnen angegebenen Kontaktdaten zur Bearbeitung der Anfrage bei uns gespeichert. Diese Daten geben wir nicht weiter.</p>
+      <p>Wenn Sie uns über das Kontaktformular kontaktieren, werden die eingegebenen Daten (Name, E-Mail, Nachricht) an unsere E-Mail-Adresse übermittelt. Diese Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet und nicht an Dritte weitergegeben. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung). Die Daten werden nach abschließender Bearbeitung gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.</p>
       <h2>4. Google Maps</h2>
-      <p>Diese Seite nutzt den Kartendienst Google Maps. Anbieter ist die Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Zur Nutzung der Funktionen von Google Maps ist es notwendig, Ihre IP-Adresse zu speichern. Mehr Informationen: <a href="https://policies.google.com/privacy" target="_blank">Google Datenschutzerklärung</a>.</p>
-      <p class="legal-note">⚠️ <strong>Hinweis:</strong> Diese Datenschutzerklärung ist ein Platzhalter. Bitte lassen Sie eine rechtssichere DSGVO-konforme Datenschutzerklärung von einem Anwalt oder einem spezialisierten Dienst (z.B. Datenschutz-Generator) erstellen.</p>
+      <p>Diese Seite nutzt Google Maps der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Beim Laden der Karte werden Daten (u.a. IP-Adresse, Standortdaten) an Google übermittelt. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO. Weitere Infos: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Datenschutzerklärung</a>.</p>
+      <h2>5. Google Fonts</h2>
+      <p>Diese Seite lädt Schriftarten von Google Fonts (Google Ireland Limited). Dabei wird Ihre IP-Adresse an Google übermittelt. Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO. Alternativ können die Fonts lokal eingebunden werden.</p>
+      <h2>6. Treatwell (Buchungslink)</h2>
+      <p>Beim Klick auf den Buchungslink werden Sie zu Treatwell (Treatwell GmbH) weitergeleitet. Es gelten die <a href="https://www.treatwell.de/info/datenschutz/" target="_blank" rel="noopener">Datenschutzbestimmungen von Treatwell</a>.</p>
+      <h2>7. Ihre Rechte</h2>
+      <p>Sie haben das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) sowie Widerspruch (Art. 21 DSGVO). Kontakt: salon@bendella.de</p>
+      <p>Sie haben außerdem das Recht, sich bei der zuständigen Aufsichtsbehörde zu beschweren: Landesbeauftragte für Datenschutz und Informationsfreiheit NRW, <a href="https://www.ldi.nrw.de" target="_blank" rel="noopener">www.ldi.nrw.de</a>.</p>
+      <div class="legal-note">⚠️ <strong>Empfehlung:</strong> Diese Datenschutzerklärung ist eine strukturierte Vorlage. Für vollständige DSGVO-Konformität empfehlen wir eine Prüfung durch einen Datenschutzbeauftragten oder einen spezialisierten Dienst (z. B. <a href="https://www.datenschutz-generator.de" target="_blank" rel="noopener">datenschutz-generator.de</a>).</div>
     </div>
   </section>
-
   <footer class="site-footer">
     <div class="footer-inner">
-      <div class="footer-brand"><span class="logo-text">Salon Bendella</span></div>
-      <div class="footer-links"><ul>
-        <li><a href="index.html">Start</a></li>
-        <li><a href="impressum.html">Impressum</a></li>
-        <li><a href="datenschutz.html">Datenschutz</a></li>
-      </ul></div>
+      <div class="footer-brand">
+        <img src="images/logo.jpg" alt="Salon Bendella" class="footer-logo" />
+        <p class="footer-tagline">BEAUTY. CONFIDENCE. YOU.</p>
+        <p data-de="Ihr Beauty-Salon in Köln-Ehrenfeld" data-en="Your Beauty Salon in Cologne-Ehrenfeld">Ihr Beauty-Salon in Köln-Ehrenfeld</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-de="Navigation" data-en="Navigation">Navigation</h4>
+        <ul>
+          <li><a href="index.html"    data-de="Start"      data-en="Home">Start</a></li>
+          <li><a href="services.html" data-de="Leistungen" data-en="Services">Leistungen</a></li>
+          <li><a href="about.html"    data-de="Über uns"   data-en="About">Über uns</a></li>
+          <li><a href="contact.html"  data-de="Kontakt"    data-en="Contact">Kontakt</a></li>
+          <li><a href="impressum.html"  data-de="Impressum"  data-en="Imprint">Impressum</a></li>
+          <li><a href="datenschutz.html" data-de="Datenschutz" data-en="Privacy">Datenschutz</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-de="Kontakt" data-en="Contact">Kontakt</h4>
+        <ul>
+          <li><a href="https://maps.google.com/?q=Venloer+Straße+226,+50823+Köln" target="_blank">Venloer Str. 226, 50823 Köln</a></li>
+          <li><a href="mailto:salon@bendella.de">salon@bendella.de</a></li>
+          <li style="color:rgba(255,255,255,0.35);font-size:0.8rem;" data-de="Di–Fr 10:00–18:00 | Sa 09:30–16:15" data-en="Tue–Fri 10:00–18:00 | Sat 09:30–16:15">Di–Fr 10:00–18:00 | Sa 09:30–16:15</li>
+        </ul>
+        <a href="https://www.treatwell.de/ort/salon-bendella/" target="_blank" class="btn btn-primary btn-sm" style="margin-top:1.2rem;display:inline-block;" data-de="Termin buchen" data-en="Book Now">Termin buchen</a>
+      </div>
     </div>
-    <p class="footer-copy">© 2026 Salon Bendella · Alle Rechte vorbehalten</p>
+    <p class="footer-copy">© 2026 Salon Bendella · Venloer Straße 226 · 50823 Köln-Ehrenfeld</p>
   </footer>
   <script src="js/main.js"></script>
+
 </body>
 </html>

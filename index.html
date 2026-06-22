@@ -3,148 +3,186 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Salon Bendella – Ihr Beauty-Salon in Köln-Ehrenfeld. Haarschnitte, Colorationen, Augenbrauen & mehr. Jetzt Termin buchen!" />
-  <title>Salon Bendella | Friseur & Beauty – Köln Ehrenfeld</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/animations.css" />
+  <title>Salon Bendella | Friseur & Beauty – Köln Ehrenfeld</title>
+  <meta name="description" content="Salon Bendella – Ihr Beauty-Salon in Köln-Ehrenfeld. Haarschnitte, Colorationen, Augenbrauen & mehr. Jetzt Termin buchen!" />
+  <!-- Structured Data: LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"HairSalon",
+    "name":"Salon Bendella",
+    "image":"https://salon-bendella.de/images/salon-interior.jpg",
+    "url":"https://salon-bendella.de",
+    "telephone":"",
+    "email":"salon@bendella.de",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"Venloer Straße 226",
+      "addressLocality":"Köln",
+      "addressRegion":"Nordrhein-Westfalen",
+      "postalCode":"50823",
+      "addressCountry":"DE"
+    },
+    "geo":{
+      "@type":"GeoCoordinates",
+      "latitude":50.948,
+      "longitude":6.919
+    },
+    "openingHoursSpecification":[
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday"],"opens":"10:00","closes":"18:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:30","closes":"16:15"}
+    ],
+    "priceRange":"€€",
+    "servesCuisine":null,
+    "currenciesAccepted":"EUR",
+    "paymentAccepted":"Cash, Card",
+    "description":"Salon Bendella in Köln-Ehrenfeld bietet Haarschnitte, Colorationen, Tönung, Dauerwelle, Augenbrauen- und Wimpernbehandlungen sowie Kinderhaarschnitte. Vegane und tierversuchsfreie Produkte.",
+    "sameAs":["https://www.treatwell.de/ort/salon-bendella/"]
+  }
+  </script>
 </head>
 <body>
 
-  <!-- ── NAVIGATION ── -->
   <nav id="navbar">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">
-        <span class="logo-text">Salon Bendella</span>
+        <img src="images/logo.jpg" alt="Salon Bendella Logo" class="nav-logo-img" style="height:48px;width:auto;object-fit:contain;border-radius:0;" />
       </a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="index.html" data-de="Start" data-en="Home">Start</a></li>
+        <li><a href="index.html"    data-de="Start"      data-en="Home">Start</a></li>
         <li><a href="services.html" data-de="Leistungen" data-en="Services">Leistungen</a></li>
-        <li><a href="about.html" data-de="Über uns" data-en="About">Über uns</a></li>
-        <li><a href="contact.html" data-de="Kontakt" data-en="Contact">Kontakt</a></li>
-        <li>
-          <a href="https://www.treatwell.de/ort/salon-bendella/" target="_blank" class="nav-cta" data-de="Termin buchen" data-en="Book Now">Termin buchen</a>
-        </li>
+        <li><a href="about.html"    data-de="Über uns"   data-en="About">Über uns</a></li>
+        <li><a href="contact.html"  data-de="Kontakt"    data-en="Contact">Kontakt</a></li>
+        <li><a href="https://www.treatwell.de/ort/salon-bendella/" target="_blank" class="nav-cta" data-de="Termin buchen" data-en="Book Now">Termin buchen</a></li>
       </ul>
       <div class="nav-right">
-        <button class="lang-toggle" id="langToggle" aria-label="Sprache wechseln">DE | EN</button>
-        <button class="hamburger" id="hamburger" aria-label="Menü öffnen">
-          <span></span><span></span><span></span>
-        </button>
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">DE | EN</button>
+        <button class="hamburger" id="hamburger" aria-label="Menü"><span></span><span></span><span></span></button>
       </div>
     </div>
   </nav>
 
+  <!-- Sticky Booking Bar -->
+  <div class="sticky-booking" id="stickyBar">
+    <span class="sticky-booking-text" data-de="✦ Jetzt online buchen – schnell & einfach" data-en="✦ Book online now – quick & easy">✦ Jetzt online buchen – schnell & einfach</span>
+    <a href="https://www.treatwell.de/ort/salon-bendella/" target="_blank" class="btn btn-primary" data-de="Termin buchen" data-en="Book Now">Termin buchen</a>
+  </div>
+
   <!-- ── HERO ── -->
   <header class="hero" id="hero">
     <div class="hero-bg">
-      <div class="hero-overlay"></div>
-      <div class="hero-pattern"></div>
+      <div class="hero-bg-img"></div>
+      <div class="hero-bg-gradient"></div>
     </div>
     <div class="hero-content">
-      <p class="hero-eyebrow reveal" data-de="Ihr Beauty-Salon in Köln-Ehrenfeld" data-en="Your Beauty Salon in Cologne-Ehrenfeld">Ihr Beauty-Salon in Köln-Ehrenfeld</p>
-      <h1 class="hero-title reveal">
-        <span class="title-line">Salon</span>
-        <span class="title-line italic">Bendella</span>
-      </h1>
+      <img src="images/logo.jpg" alt="Salon Bendella" class="hero-logo reveal" />
+      <p class="hero-tagline reveal">Köln · Ehrenfeld · Venloer Straße 226</p>
       <p class="hero-sub reveal" data-de="Schönheit, die begeistert. Pflege, die verwöhnt." data-en="Beauty that inspires. Care that indulges.">Schönheit, die begeistert. Pflege, die verwöhnt.</p>
       <div class="hero-actions reveal">
-        <a href="https://www.treatwell.de/ort/salon-bendella/" target="_blank" class="btn btn-primary" data-de="Termin buchen" data-en="Book Appointment">Termin buchen</a>
-        <a href="services.html" class="btn btn-outline" data-de="Leistungen entdecken" data-en="Explore Services">Leistungen entdecken</a>
+        <a href="https://www.treatwell.de/ort/salon-bendella/" target="_blank" class="btn btn-primary btn-large" data-de="Jetzt Termin buchen" data-en="Book Appointment">Jetzt Termin buchen</a>
+        <a href="services.html" class="btn btn-outline" data-de="Leistungen & Preise" data-en="Services & Prices">Leistungen & Preise</a>
       </div>
     </div>
-    <div class="hero-scroll-indicator">
-      <span></span>
-    </div>
+    <div class="hero-scroll"><span></span></div>
   </header>
 
   <!-- ── USP STRIP ── -->
   <section class="usp-strip">
     <div class="usp-grid">
-      <div class="usp-item reveal">
-        <span class="usp-icon">✦</span>
-        <p data-de="Vegane & tierversuchsfreie Produkte" data-en="Vegan & cruelty-free products">Vegane & tierversuchsfreie Produkte</p>
-      </div>
-      <div class="usp-item reveal">
-        <span class="usp-icon">✦</span>
-        <p data-de="5 Sprachen: DE · EN · TR · AR · RO" data-en="5 languages: DE · EN · TR · AR · RO">5 Sprachen: DE · EN · TR · AR · RO</p>
-      </div>
-      <div class="usp-item reveal">
-        <span class="usp-icon">✦</span>
-        <p data-de="Kostenloses WLAN & Getränke" data-en="Free WiFi & refreshments">Kostenloses WLAN & Getränke</p>
-      </div>
-      <div class="usp-item reveal">
-        <span class="usp-icon">✦</span>
-        <p data-de="Kinder & Haustiere willkommen" data-en="Kids & pets welcome">Kinder & Haustiere willkommen</p>
-      </div>
+      <div class="usp-item reveal"><span class="usp-icon">🌿</span><p data-de="Vegane & tierversuchsfreie Produkte" data-en="Vegan & cruelty-free products">Vegane & tierversuchsfreie Produkte</p></div>
+      <div class="usp-item reveal"><span class="usp-icon">🌍</span><p data-de="5 Sprachen: DE · EN · TR · AR · RO" data-en="5 languages: DE · EN · TR · AR · RO">5 Sprachen: DE · EN · TR · AR · RO</p></div>
+      <div class="usp-item reveal"><span class="usp-icon">☕</span><p data-de="Kostenloses WLAN & Getränke" data-en="Free WiFi & refreshments">Kostenloses WLAN & Getränke</p></div>
+      <div class="usp-item reveal"><span class="usp-icon">🐾</span><p data-de="Kinder & Haustiere willkommen" data-en="Kids & pets welcome">Kinder & Haustiere willkommen</p></div>
     </div>
   </section>
 
   <!-- ── SERVICES PREVIEW ── -->
-  <section class="section services-preview" id="services-preview">
+  <section class="section services-preview" id="leistungen">
     <div class="container">
       <div class="section-header reveal">
         <span class="section-tag" data-de="Unsere Leistungen" data-en="Our Services">Unsere Leistungen</span>
         <h2 data-de="Schönheit von Kopf bis Fuß" data-en="Beauty from Head to Toe">Schönheit von Kopf bis Fuß</h2>
-        <p data-de="Von Haarfarbe über Augenbrauen bis Waxing – wir kümmern uns um alles." data-en="From hair colour to brows and waxing – we take care of it all.">Von Haarfarbe über Augenbrauen bis Waxing – wir kümmern uns um alles.</p>
+        <div class="gold-line"></div>
+        <p data-de="Von Haarfarbe über Augenbrauen bis Waxing – wir kümmern uns um alles." data-en="From colour to brows and waxing – we take care of it all.">Von Haarfarbe über Augenbrauen bis Waxing – wir kümmern uns um alles.</p>
       </div>
       <div class="services-grid">
         <a href="services.html#haarschnitte" class="service-card reveal">
-          <div class="service-icon-wrap">
-            <svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="28" stroke="currentColor" stroke-width="1.5"/><path d="M20 38c2-4 5-8 10-8s8 4 10 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="30" cy="22" r="5" stroke="currentColor" stroke-width="1.5"/></svg>
-          </div>
+          <div class="service-icon-wrap"><svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="27" stroke="currentColor" stroke-width="1.5"/><path d="M20 40c2-5 5-9 10-9s8 4 10 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="30" cy="22" r="5" stroke="currentColor" stroke-width="1.5"/></svg></div>
           <h3 data-de="Haarschnitte & Styling" data-en="Haircuts & Styling">Haarschnitte & Styling</h3>
           <p data-de="Waschen, Schneiden, Föhnen & Dauerwelle" data-en="Wash, cut, blow-dry & perm">Waschen, Schneiden, Föhnen & Dauerwelle</p>
           <span class="service-from" data-de="ab 28 €" data-en="from €28">ab 28 €</span>
         </a>
         <a href="services.html#farbe" class="service-card reveal">
-          <div class="service-icon-wrap">
-            <svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="28" stroke="currentColor" stroke-width="1.5"/><path d="M22 42c0-8 4-18 8-22 4 4 8 14 8 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M26 36h8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
-          </div>
+          <div class="service-icon-wrap"><svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="27" stroke="currentColor" stroke-width="1.5"/><path d="M22 44c0-9 4-18 8-22 4 4 8 13 8 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M25 38h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
           <h3 data-de="Farbe & Coloration" data-en="Colour & Colouring">Farbe & Coloration</h3>
           <p data-de="Strähnen, Ansatzfarbe, Tönung & Vollfarbe" data-en="Highlights, root colour, tint & full colour">Strähnen, Ansatzfarbe, Tönung & Vollfarbe</p>
           <span class="service-from" data-de="ab 45 €" data-en="from €45">ab 45 €</span>
         </a>
         <a href="services.html#augenbrauen" class="service-card reveal">
-          <div class="service-icon-wrap">
-            <svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="28" stroke="currentColor" stroke-width="1.5"/><path d="M18 28c4-5 10-5 12-5s8 0 12 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><ellipse cx="30" cy="34" rx="5" ry="3" stroke="currentColor" stroke-width="1.5"/></svg>
-          </div>
+          <div class="service-icon-wrap"><svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="27" stroke="currentColor" stroke-width="1.5"/><path d="M17 27c5-6 11-5 13-5s8-1 13 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><ellipse cx="30" cy="34" rx="5" ry="3" stroke="currentColor" stroke-width="1.5"/></svg></div>
           <h3 data-de="Augenbrauen & Wimpern" data-en="Brows & Lashes">Augenbrauen & Wimpern</h3>
           <p data-de="Färben, Zupfen & Fadentechnik" data-en="Tinting, threading & shaping">Färben, Zupfen & Fadentechnik</p>
           <span class="service-from" data-de="ab 17 €" data-en="from €17">ab 17 €</span>
         </a>
         <a href="services.html#kinder" class="service-card reveal">
-          <div class="service-icon-wrap">
-            <svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="28" stroke="currentColor" stroke-width="1.5"/><path d="M22 42c2-6 4-10 8-12 4 2 6 6 8 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="30" cy="24" r="6" stroke="currentColor" stroke-width="1.5"/><path d="M24 22c1-2 3-3 6-3" stroke="currentColor" stroke-width="1" stroke-linecap="round"/></svg>
-          </div>
+          <div class="service-icon-wrap"><svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="27" stroke="currentColor" stroke-width="1.5"/><path d="M22 43c2-6 4-10 8-12 4 2 6 6 8 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="30" cy="23" r="6" stroke="currentColor" stroke-width="1.5"/></svg></div>
           <h3 data-de="Kinder-Haarschnitte" data-en="Children's Haircuts">Kinder-Haarschnitte</h3>
-          <p data-de="Liebevoll & geduldig – bis 6 Jahre und älter" data-en="Caring & patient – up to 6 years and older">Liebevoll & geduldig – bis 6 Jahre und älter</p>
+          <p data-de="Liebevoll & geduldig – bis 6 Jahre" data-en="Caring & patient – up to 6 years">Liebevoll & geduldig – bis 6 Jahre</p>
           <span class="service-from" data-de="ab 22 €" data-en="from €22">ab 22 €</span>
         </a>
       </div>
       <div class="section-cta reveal">
-        <a href="services.html" class="btn btn-ghost" data-de="Alle Leistungen ansehen" data-en="View All Services">Alle Leistungen ansehen</a>
+        <a href="services.html" class="btn btn-outline" data-de="Alle Leistungen & Preise" data-en="All Services & Prices">Alle Leistungen & Preise</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BEFORE/AFTER ── -->
+  <section class="section gallery-section" id="galerie">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag" data-de="Unsere Ergebnisse" data-en="Our Results">Unsere Ergebnisse</span>
+        <h2 data-de="Vorher & Nachher" data-en="Before & After">Vorher & Nachher</h2>
+        <div class="gold-line"></div>
+        <p data-de="Sehen Sie selbst, was unser Team möglich macht." data-en="See for yourself what our team can achieve.">Sehen Sie selbst, was unser Team möglich macht.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item reveal">
+          <img src="images/before-after-1.jpg" alt="Vorher Nachher Haarschnitt Bob Salon Bendella Köln" loading="lazy" />
+          <div class="gallery-label" data-de="Haarschnitt · Bob" data-en="Haircut · Bob">Haarschnitt · Bob</div>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="images/before-after-2.jpg" alt="Vorher Nachher Blonde Strähnen Coloration Salon Bendella Köln" loading="lazy" />
+          <div class="gallery-label" data-de="Coloration · Blond" data-en="Colour · Blonde">Coloration · Blond</div>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="images/before-after-3.jpg" alt="Vorher Nachher Balayage Strähnen Salon Bendella Köln" loading="lazy" />
+          <div class="gallery-label" data-de="Balayage · Strähnen" data-en="Balayage · Highlights">Balayage · Strähnen</div>
+        </div>
+      </div>
+      <div class="section-cta reveal">
+        <a href="https://www.treatwell.de/ort/salon-bendella/" target="_blank" class="btn btn-primary" data-de="Jetzt Termin buchen" data-en="Book Now">Jetzt Termin buchen</a>
       </div>
     </div>
   </section>
 
   <!-- ── ABOUT TEASER ── -->
-  <section class="section about-teaser">
+  <section class="section about-teaser" id="ueber-uns">
     <div class="about-split">
-      <div class="about-visual reveal">
-        <div class="about-image-frame">
-          <div class="about-placeholder">
-            <svg viewBox="0 0 200 300" fill="none"><rect width="200" height="300" fill="#1a1a1a"/><text x="100" y="140" text-anchor="middle" fill="#c9a96e" font-family="Cormorant Garamond" font-size="14">Foto folgt</text><text x="100" y="165" text-anchor="middle" fill="#888" font-family="Jost" font-size="10">Mahdjouba & Team</text></svg>
-          </div>
-          <div class="about-accent-box"></div>
-        </div>
+      <div class="about-image-frame reveal">
+        <img src="images/salon-interior.jpg" alt="Salon Bendella Innenraum Köln Ehrenfeld" />
+        <div class="about-accent-box"></div>
       </div>
       <div class="about-text reveal">
         <span class="section-tag" data-de="Über uns" data-en="About Us">Über uns</span>
-        <h2 data-de="Leidenschaft für Schönheit seit Jahren" data-en="A Passion for Beauty for Years">Leidenschaft für Schönheit seit Jahren</h2>
-        <p data-de="Im Herzen von Köln-Ehrenfeld auf der Venloer Straße begrüßen wir Sie in einer Atmosphäre, die modern, hell und herzlich ist. Inhaberin Mahdjouba und Kosmetikerin Alina begleiten Sie mit Kompetenz und echter Leidenschaft zu Ihrem perfekten Look." data-en="In the heart of Cologne-Ehrenfeld on Venloer Straße, we welcome you in an atmosphere that is modern, bright and warm. Owner Mahdjouba and beauty specialist Alina guide you with expertise and genuine passion to your perfect look.">Im Herzen von Köln-Ehrenfeld auf der Venloer Straße begrüßen wir Sie in einer Atmosphäre, die modern, hell und herzlich ist. Inhaberin Mahdjouba und Kosmetikerin Alina begleiten Sie mit Kompetenz und echter Leidenschaft zu Ihrem perfekten Look.</p>
+        <h2 data-de="Ihr Wohlfühlsalon in Ehrenfeld" data-en="Your Wellness Salon in Ehrenfeld">Ihr Wohlfühlsalon in Ehrenfeld</h2>
+        <div class="gold-line" style="margin:0 0 1rem;"></div>
+        <p data-de="Im Herzen von Köln-Ehrenfeld auf der Venloer Straße erwartet Sie ein helles, modernes und einladendes Ambiente. Inhaberin Mahdjouba begleitet Sie mit Kompetenz und Leidenschaft zu Ihrem perfekten Look." data-en="In the heart of Cologne-Ehrenfeld on Venloer Straße, a bright, modern and welcoming ambience awaits you. Owner Mahdjouba guides you with expertise and passion to your perfect look.">Im Herzen von Köln-Ehrenfeld auf der Venloer Straße erwartet Sie ein helles, modernes und einladendes Ambiente. Inhaberin Mahdjouba begleitet Sie mit Kompetenz und Leidenschaft zu Ihrem perfekten Look.</p>
         <ul class="about-features">
           <li data-de="✦ Vegane, tierversuchsfreie Naturkosmetik" data-en="✦ Vegan, cruelty-free natural cosmetics">✦ Vegane, tierversuchsfreie Naturkosmetik</li>
           <li data-de="✦ Team spricht DE, EN, TR, AR & RO" data-en="✦ Team speaks DE, EN, TR, AR & RO">✦ Team spricht DE, EN, TR, AR & RO</li>
@@ -156,20 +194,53 @@
     </div>
   </section>
 
+  <!-- ── REVIEWS ── -->
+  <section class="section reviews-section" id="bewertungen">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag" data-de="Kundenstimmen" data-en="Client Reviews">Kundenstimmen</span>
+        <h2 data-de="Was unsere Kunden sagen" data-en="What Our Clients Say">Was unsere Kunden sagen</h2>
+        <div class="gold-line"></div>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text" data-de="„Ich bin seit Jahren Stammkundin und jedes Mal begeistert. Mahdjouba versteht genau, was ich möchte – das Ergebnis ist immer perfekt."" data-en="„I've been a regular for years and am always delighted. Mahdjouba knows exactly what I want – the result is always perfect."">„Ich bin seit Jahren Stammkundin und jedes Mal begeistert. Mahdjouba versteht genau, was ich möchte – das Ergebnis ist immer perfekt."</p>
+          <span class="review-author">Sarah K.</span>
+          <span class="review-source">Treatwell ✓</span>
+        </div>
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text" data-de="„Toller Salon, super Atmosphäre und sehr kompetentes Team. Die Coloration wurde genau so umgesetzt, wie ich es mir vorgestellt habe. Absolute Empfehlung!"" data-en="„Great salon, wonderful atmosphere and very skilled team. The colour was done exactly as I imagined. Highly recommend!"">„Toller Salon, super Atmosphäre und sehr kompetentes Team. Die Coloration wurde genau so umgesetzt, wie ich es mir vorgestellt habe. Absolute Empfehlung!"</p>
+          <span class="review-author">Lara M.</span>
+          <span class="review-source">Treatwell ✓</span>
+        </div>
+        <div class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text" data-de="„Freundliches Team, faire Preise und ein echtes Wohlfühlambiente. Mein Haarschnitt ist jedes Mal ein Highlight. Ich komme sehr gerne wieder!"" data-en="„Friendly team, fair prices and a truly welcoming atmosphere. My haircut is always a highlight. I always look forward to coming back!"">„Freundliches Team, faire Preise und ein echtes Wohlfühlambiente. Mein Haarschnitt ist jedes Mal ein Highlight. Ich komme sehr gerne wieder!"</p>
+          <span class="review-author">Nadia T.</span>
+          <span class="review-source">Google ✓</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ── BOOKING CTA ── -->
-  <section class="section booking-cta">
+  <section class="section booking-cta" id="buchen">
+    <div class="booking-cta-overlay"></div>
     <div class="container">
       <div class="booking-inner reveal">
         <span class="section-tag" data-de="Termin vereinbaren" data-en="Book an Appointment">Termin vereinbaren</span>
         <h2 data-de="Bereit für Ihren neuen Look?" data-en="Ready for Your New Look?">Bereit für Ihren neuen Look?</h2>
-        <p data-de="Buchen Sie jetzt bequem online Ihren Wunschtermin – schnell, einfach und ohne Wartezeit." data-en="Book your preferred appointment online now – quick, easy and without waiting.">Buchen Sie jetzt bequem online Ihren Wunschtermin – schnell, einfach und ohne Wartezeit.</p>
+        <div class="gold-line"></div>
+        <p data-de="Buchen Sie jetzt bequem online – schnell, einfach und ohne Wartezeit am Telefon." data-en="Book online now – quick, easy and without waiting on the phone.">Buchen Sie jetzt bequem online – schnell, einfach und ohne Wartezeit am Telefon.</p>
         <a href="https://www.treatwell.de/ort/salon-bendella/" target="_blank" class="btn btn-primary btn-large" data-de="Jetzt Termin buchen" data-en="Book Appointment Now">Jetzt Termin buchen</a>
       </div>
     </div>
   </section>
 
-  <!-- ── OPENING HOURS & LOCATION ── -->
-  <section class="section info-section">
+  <!-- ── INFO ── -->
+  <section class="section info-section" id="info">
     <div class="container">
       <div class="info-grid">
         <div class="info-card reveal">
@@ -194,38 +265,44 @@
           <a href="https://maps.google.com/?q=Venloer+Straße+226,+50823+Köln" target="_blank" class="btn btn-ghost btn-sm" data-de="Route planen" data-en="Get Directions">Route planen</a>
         </div>
         <div class="info-card map-card reveal">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2513.5!2d6.9189!3d50.9481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bf25a9e5a60001%3A0x1!2sVenloer+Stra%C3%9Fe+226%2C+50823+K%C3%B6ln!5e0!3m2!1sde!2sde!4v1600000000000"
-            width="100%" height="260" style="border:0;border-radius:4px;" allowfullscreen="" loading="lazy"
-            title="Salon Bendella Standort"></iframe>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2513.5!2d6.9189!3d50.9481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47bf25a9e5a60001%3A0x1!2sVenloer+Stra%C3%9Fe+226%2C+50823+K%C3%B6ln!5e0!3m2!1sde!2sde!4v1600000000000"
+            width="100%" height="100%" style="border:0;min-height:260px;" allowfullscreen="" loading="lazy" title="Salon Bendella Standort"></iframe>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── FOOTER ── -->
   <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <span class="logo-text">Salon Bendella</span>
+        <img src="images/logo.jpg" alt="Salon Bendella" class="footer-logo" />
+        <p class="footer-tagline">BEAUTY. CONFIDENCE. YOU.</p>
         <p data-de="Ihr Beauty-Salon in Köln-Ehrenfeld" data-en="Your Beauty Salon in Cologne-Ehrenfeld">Ihr Beauty-Salon in Köln-Ehrenfeld</p>
       </div>
-      <div class="footer-links">
+      <div class="footer-col">
+        <h4 data-de="Navigation" data-en="Navigation">Navigation</h4>
         <ul>
-          <li><a href="index.html" data-de="Start" data-en="Home">Start</a></li>
+          <li><a href="index.html"    data-de="Start"      data-en="Home">Start</a></li>
           <li><a href="services.html" data-de="Leistungen" data-en="Services">Leistungen</a></li>
-          <li><a href="about.html" data-de="Über uns" data-en="About">Über uns</a></li>
-          <li><a href="contact.html" data-de="Kontakt" data-en="Contact">Kontakt</a></li>
+          <li><a href="about.html"    data-de="Über uns"   data-en="About">Über uns</a></li>
+          <li><a href="contact.html"  data-de="Kontakt"    data-en="Contact">Kontakt</a></li>
+          <li><a href="impressum.html"  data-de="Impressum"  data-en="Imprint">Impressum</a></li>
+          <li><a href="datenschutz.html" data-de="Datenschutz" data-en="Privacy">Datenschutz</a></li>
         </ul>
       </div>
-      <div class="footer-book">
-        <a href="https://www.treatwell.de/ort/salon-bendella/" target="_blank" class="btn btn-primary" data-de="Termin buchen" data-en="Book Now">Termin buchen</a>
-        <p class="footer-legal"><a href="impressum.html" data-de="Impressum" data-en="Imprint">Impressum</a> · <a href="datenschutz.html" data-de="Datenschutz" data-en="Privacy">Datenschutz</a></p>
+      <div class="footer-col">
+        <h4 data-de="Kontakt" data-en="Contact">Kontakt</h4>
+        <ul>
+          <li><a href="https://maps.google.com/?q=Venloer+Straße+226,+50823+Köln" target="_blank">Venloer Str. 226, 50823 Köln</a></li>
+          <li><a href="mailto:salon@bendella.de">salon@bendella.de</a></li>
+          <li style="color:rgba(255,255,255,0.35);font-size:0.8rem;" data-de="Di–Fr 10:00–18:00 | Sa 09:30–16:15" data-en="Tue–Fri 10:00–18:00 | Sat 09:30–16:15">Di–Fr 10:00–18:00 | Sa 09:30–16:15</li>
+        </ul>
+        <a href="https://www.treatwell.de/ort/salon-bendella/" target="_blank" class="btn btn-primary btn-sm" style="margin-top:1.2rem;display:inline-block;" data-de="Termin buchen" data-en="Book Now">Termin buchen</a>
       </div>
     </div>
-    <p class="footer-copy">© 2026 Salon Bendella · Alle Rechte vorbehalten</p>
+    <p class="footer-copy">© 2026 Salon Bendella · Venloer Straße 226 · 50823 Köln-Ehrenfeld</p>
   </footer>
-
   <script src="js/main.js"></script>
+
 </body>
 </html>
