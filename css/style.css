@@ -46,7 +46,7 @@ p  { color: var(--mid-grey); font-size: 0.95rem; }
 }
 .hero-logo {
   mix-blend-mode: multiply;
-  height: clamp(160px, 28vw, 260px) !important;
+  height: clamp(220px, 40vw, 380px) !important;
   width: auto !important;
   max-width: 520px;
   margin: 0 auto 1.5rem;
